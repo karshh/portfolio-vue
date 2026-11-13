@@ -1,0 +1,1 @@
+export default defineEventHandler(()=>{const c=useRuntimeConfig();const key=c.public.turnstileSiteKey||(import.meta.dev?'1x00000000000000000000AA':'');if(!key)throw createError({statusCode:503,statusMessage:'Contact form is unavailable.'});return{turnstileSiteKey:key}})
